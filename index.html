@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text|Poppins:400,600,700&display=swap" rel="stylesheet"> 
+
+    <title>PF Instant Assessment</title>
+  </head>
+  <body>
+    <div class="page-header d-flex justify-content-center">
+        <h1>Profit First Instant Assessment</h1>
+    </div>
+    <div class="container">
+        <table class='table table-bordered table-responsive-sm table-hover'>
+            <thead>
+                <tr class='text-center'>
+                    <th scope='col'></th>
+                    <th scope='col'>ACTUAL</th>
+                    <th scope='col'>PF%</th>
+                    <th scope='col'>PF$</th>
+                    <th scope='col'>BLEED</th>
+                    <th scope='col'>FIX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope='row'>Top Line Revenue</th>
+                    <td>
+                        <div class="form">
+                           <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-1' class='top-line-revenue' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                        
+                    </td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                </tr>
+
+                
+                <tr>
+                    <th scope='row'>Material & Subs</th>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-2' class='mat-subs-input' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                </tr>
+
+                <tr>
+                    <th scope='row'>Real Revenue</th>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-3' class='real-revenue-input' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div  ><span class="revenue-percentage"></span>%</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div >$<span class="revenue-result"></span></div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                </tr>
+
+                <tr>
+                    <th scope='row'>Profit</th>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-4' class='profit-input' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div ><span class="profit-percentage"></span>%</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div >$<span class="profit-result" ></span></div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="profit-bleed" >Bleed Factor</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div id = 'prof-fix' class="profit-fix" >Fix</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope='row'>Owner's Pay</th>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-5' class='owner-pay-input' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div  ><span class="owner-percentage"></span>%</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div  >$<span class="owner-result"></span></div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="owner-bleed" >Bleed Factor</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div id='own-fix' class="owner-fix" >Fix</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope='row'>Tax</th>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-6' class='tax-input' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div  ><span class="tax-percentage"></span>%</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div  >$<span class="tax-result"></span></div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="tax-bleed" >Bleed Factor</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div id = 'tx-fix' class="tax-fix" >Fix</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope='row'>Operating Expenses</th>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="col">
+                                        <input id = 'clearFields-7' class = 'expense-input' type="number" >
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div  ><span class="expense-percentage"></span>%</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div >$<span class="expense-result" ></span></div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div class="expense-bleed" ><span></span>Bleed Factor</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form">
+                            <form action="">
+                                <div class = 'form-row align-items-center'>
+                                    <div id = 'ex-fix' class="expense-fix" >Fix</div>
+                                </div>
+                            </form> 
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope='row'>Total Real Revenue</th>
+                    <td id = 'total' class = 'fake-revenue'>
+                        <div  class="form">
+                           <span >$</span><span id = "total-real-revenue" class="total-rev">0</span> 
+                        </div>
+                        
+                    </td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                    <td class="blank"><div >Blank</div></td>
+                </tr>
+
+                
+
+            </tbody>
+        </table>
+        <button onclick = formReset() type="button" class="btn btn-outline-success btn-lg btn-block">RESET</button>
+        <p>Created by UreaLaden at <a href='https://pytechcoding.com/'>PyTechCoding</a></p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
